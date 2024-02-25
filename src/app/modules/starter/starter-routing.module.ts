@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StarterComponent } from './starter.component';
-import {PricingComponent} from "./components/pricing/pricing.component";
-// import {StarterPricingComponent} from "./components/starter-pricing/starter-pricing.component";
+import {StarterPricingComponent} from "./components/starter-pricing/starter-pricing.component";
+import {StarterHomeContextComponent} from "./components/starter-home-context/starter-home-context.component";
 
 const routes: Routes = [
-  { path: '', component: StarterComponent },
-  { path: 'pricing',component:PricingComponent},
-  // { path: 'pricing',component:StarterPricingComponent}
+  { path: '', component: StarterComponent, children : [
+      {path: '', redirectTo:'/Starter/home'},
+      {path: 'home', component:StarterHomeContextComponent},
+      {path: 'pricing', component:StarterPricingComponent}
+
+    ]},
+
 
 
 ];
