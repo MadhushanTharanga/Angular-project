@@ -6,7 +6,7 @@ import {StarterHomeContextComponent} from "./components/starter-home-context/sta
 
 const routes: Routes = [
   { path: '', component: StarterComponent, children : [
-      {path: '', redirectTo:'/Starter/home'},
+      {path: '', redirectTo:'/Starter/home',pathMatch:'full'},
       {path: 'home', component:StarterHomeContextComponent},
       {path: 'pricing', component:StarterPricingComponent}
 
