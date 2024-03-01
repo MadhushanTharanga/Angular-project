@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import {CookieService} from "ngx-cookie-service";
 // import { PricingComponent } from './components/pricing/pricing.component';
 
 @NgModule({
@@ -16,7 +17,9 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
